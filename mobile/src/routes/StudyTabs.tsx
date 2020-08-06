@@ -1,6 +1,7 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
+import { Platform, StyleSheet } from 'react-native';
 
 import Favorites from '../pages/Favorites';
 import TeacherList from '../pages/TeacherList';
@@ -14,17 +15,21 @@ function StudyTabs() {
         style: {
           elevation: 0,
           shadowOpacity: 0,
-          height: 64
+          height: Platform.OS === 'ios' ? 84 : 64,
         },
         tabStyle: {
           flexDirection: 'row',
           alignItems: 'center',
-          justifyContent: 'center'
+          justifyContent: 'center',
+          paddingBottom: Platform.OS === 'ios' ? 20 : 0
+        },
+        safeAreaInsets: {
+          bottom: 0,
         },
         iconStyle: {
           flex: 0,
           width: 20,
-          height: 20
+          height: Platform.OS === 'ios' ? 24 : 20
         },
         labelStyle: {
           fontFamily: 'Archivo_700Bold',
