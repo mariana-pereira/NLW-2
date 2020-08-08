@@ -27,24 +27,24 @@ function Landing() {
       <div id="page-landing-content" className="container">
         <div className="logo-container">
           <img src={logoImg} alt="Proffy"/>
-          <h2>Sua plataforma de estudos online.</h2>
+          <h2>あなたのオンライン学習プラットフォーム。</h2>
         </div>
-        <img src={landingImg} alt="Plataforma de estudos" className="hero-image"/>
+        <img src={landingImg} alt="学習プラットフォーム" className="hero-image"/>
 
         <div className="buttons-container">
           <Link to="/study" className="study">
-            <img src={studyIcon} alt="Estudar"/>
-            Estudar
+            <img src={studyIcon} alt="勉強する"/>
+            勉強する
           </Link>
 
           <Link to="/give-classes" className="give-classes">
-            <img src={giveClassesIcon} alt="Dar aulas"/>
-            Dar aulas
+            <img src={giveClassesIcon} alt="クラスを与える"/>
+            クラスを与える
           </Link>
         </div>
 
         <span className="total-connections">
-          Total de {totalConnections} conexões já realizadas <img src={purpleHeartIcon} alt="Coração roxo"/>
+        すでに{totalConnections}の接続が確立されています <img src={purpleHeartIcon} alt="パープルハート"/>
         </span>
       </div>
     </div>

@@ -54,33 +54,33 @@ function TeacherForm() {
       cost: Number(cost),
       schedule: scheduleItems
     }).then(() => {
-      alert('Cadastro realizado com sucesso.');
+      alert('登録に成功しました。');
       history.push('/');
     }).catch(() => {
-      alert('Erro no cadastro.');
+      alert('登録エラー。');
     });
   }
 
   return (
     <div id="page-teacher-form" className="container">
       <PageHeader 
-        title="Que incrível que você quer dar aulas."
-        description="O primeiro passo é preencher este formulário de inscrição."
+        title="教えたいなんてすごい。"
+        description="最初のステップは、この申し込みフォームに記入することです。"
       />
 
       <main>
         <form onSubmit={handleCreateClass}>
           <fieldset>
-            <legend>Seus dados</legend>
+            <legend>あなたのデータ</legend>
             <Input 
               name="name" 
-              label="Nome completo"
+              label="フルネーム"
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
             <Input 
               name="avatar" 
-              label="Avatar"
+              label="アバター"
               value={avatar}
               onChange={(e) => setAvatar(e.target.value)}
             />
@@ -92,35 +92,35 @@ function TeacherForm() {
             />
             <Textarea 
               name="bio" 
-              label="Biografia"
+              label="バイオグラフィー"
               value={bio}
               onChange={(e) => setBio(e.target.value)}
             />
           </fieldset>
 
           <fieldset>
-            <legend>Sobre a aula</legend>
+            <legend>クラスについて</legend>
             <Select 
               name="subject" 
-              label="Matéria"
+              label="主題"
               value={subject}
               onChange={(e) => setSubject(e.target.value)}
               options={[
-                { value: 'Artes', label: 'Artes' },
-                { value: 'Biologia', label: 'Biologia' },
-                { value: 'Ciências', label: 'Ciências' },
-                { value: 'Educação Física', label: 'Educação Física' },
-                { value: 'Física', label: 'Física' },
-                { value: 'Geografia', label: 'Geografia' },
-                { value: 'História', label: 'História' },
-                { value: 'Matemática', label: 'Matemática' },
-                { value: 'Português', label: 'Português' },
-                { value: 'Química', label: 'Química' }
+                { value: 'Artes', label: '芸術' },
+                { value: 'Biologia', label: '生物学' },
+                { value: 'Ciências', label: '科学' },
+                { value: 'Educação Física', label: '学校体育' },
+                { value: 'Física', label: '物理学' },
+                { value: 'Geografia', label: '地理学' },
+                { value: 'História', label: '歴史' },
+                { value: 'Matemática', label: '数学' },
+                { value: 'Português', label: 'ポルトガル語' },
+                { value: 'Química', label: '化学' }
               ]}
             />
             <Input 
               name="cost" 
-              label="Custo da sua hora por aula"
+              label="クラスあたりの時間のコスト"
               value={cost}
               onChange={(e) => setCost(e.target.value)}
             />
@@ -128,9 +128,9 @@ function TeacherForm() {
 
           <fieldset>
             <legend>
-              Horários disponíveis
+              利用可能な時間
               <button type="button" onClick={addNewScheduleItem}>
-                + Novo horário
+                + 新しい時間
               </button>
             </legend>
 
@@ -138,30 +138,30 @@ function TeacherForm() {
               return (
                 <div key={scheduleItem.week_day} className="schedule-item">
                   <Select 
-                    name="subject" 
-                    label="Matéria"
+                    name="week_day" 
+                    label="曜日"
                     value={scheduleItem.week_day}
                     onChange={e => setScheduleItemValue(index, 'week_day', e.target.value)}
                     options={[
-                      { value: '0', label: 'Domingo' },
-                      { value: '1', label: 'Segunda-feira' },
-                      { value: '2', label: 'Terça-feira' },
-                      { value: '3', label: 'Quarta-feira' },
-                      { value: '4', label: 'Quinta-feira' },
-                      { value: '5', label: 'Sexta-feira' },
-                      { value: '6', label: 'Sábado' }
+                      { value: '0', label: '日曜日' },
+                      { value: '1', label: '月曜日' },
+                      { value: '2', label: '火曜日' },
+                      { value: '3', label: '水曜日' },
+                      { value: '4', label: '木曜日' },
+                      { value: '5', label: '金曜日' },
+                      { value: '6', label: '土曜日' }
                     ]}
                   />
                   <Input 
                     name="from" 
-                    label="Das" 
+                    label="から" 
                     type="time"
                     value={scheduleItem.from}
                     onChange={e => setScheduleItemValue(index, 'from', e.target.value)}
                   />
                   <Input 
                     name="to" 
-                    label="Até" 
+                    label="に" 
                     type="time"
                     value={scheduleItem.to}
                     onChange={e => setScheduleItemValue(index, 'to', e.target.value)}
@@ -173,11 +173,11 @@ function TeacherForm() {
 
           <footer>
             <p>
-              <img src={warningIcon} alt="Aviso importante"/>
-              Importante ! <br/>
-              Preencha todos os dados.
+              <img src={warningIcon} alt="重要な警告"/>
+              重要！ <br/>
+              すべてのデータを入力します。
             </p>
-            <button type="submit">Salvar cadastro</button>
+            <button type="submit">登録を保存</button>
           </footer>
         </form>
 

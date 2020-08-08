@@ -30,49 +30,49 @@ function TeacherList() {
 
   return (
     <div id="page-teacher-list" className="container">
-      <PageHeader title="Estes são os proffys disponíveis.">
+      <PageHeader title="これらは利用可能なProffysです。">
         <form onSubmit={searchTeachers} id="search-teachers">
         <Select 
           name="subject" 
-          label="Matéria"
+          label="主題"
           value={subject}
           onChange={e => setSubject(e.target.value)}
           options={[
-            { value: 'Artes', label: 'Artes' },
-            { value: 'Biologia', label: 'Biologia' },
-            { value: 'Ciências', label: 'Ciências' },
-            { value: 'Educação Física', label: 'Educação Física' },
-            { value: 'Física', label: 'Física' },
-            { value: 'Geografia', label: 'Geografia' },
-            { value: 'História', label: 'História' },
-            { value: 'Matemática', label: 'Matemática' },
-            { value: 'Português', label: 'Português' },
-            { value: 'Química', label: 'Química' }
+            { value: 'Artes', label: '芸術' },
+            { value: 'Biologia', label: '生物学' },
+            { value: 'Ciências', label: '科学' },
+            { value: 'Educação Física', label: '学校体育' },
+            { value: 'Física', label: '物理学' },
+            { value: 'Geografia', label: '地理学' },
+            { value: 'História', label: '歴史' },
+            { value: 'Matemática', label: '数学' },
+            { value: 'Português', label: 'ポルトガル語' },
+            { value: 'Química', label: '化学' }
           ]}
         />
           <Select 
             name="week_day" 
-            label="Dia da semana"
+            label="曜日"
             value={week_day}
             onChange={e => setWeekDay(e.target.value)}
             options={[
-              { value: '0', label: 'Domingo' },
-              { value: '1', label: 'Segunda-feira' },
-              { value: '2', label: 'Terça-feira' },
-              { value: '3', label: 'Quarta-feira' },
-              { value: '4', label: 'Quinta-feira' },
-              { value: '5', label: 'Sexta-feira' },
-              { value: '6', label: 'Sábado' }
+              { value: '0', label: '日曜日' },
+              { value: '1', label: '月曜日' },
+              { value: '2', label: '火曜日' },
+              { value: '3', label: '水曜日' },
+              { value: '4', label: '木曜日' },
+              { value: '5', label: '金曜日' },
+              { value: '6', label: '土曜日' }
             ]}
         />
           <Input 
             type="time" 
             name="time" 
-            label="Hora"
+            label="時"
             value={time}
             onChange={e => setTime(e.target.value)}
           />
-          <button type="submit">Buscar</button>
+          <button type="submit">探す</button>
         </form>
       </PageHeader>
 

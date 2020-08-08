@@ -43,7 +43,7 @@ const TeacherItem: React.FC<TeacherItemProps> = ({ teacher }) => {
 
           <footer>
             <p>
-              preço/hora
+              価格/時間
               <strong>R$ {teacher.cost}</strong>
             </p>
             <a 
@@ -52,7 +52,7 @@ const TeacherItem: React.FC<TeacherItemProps> = ({ teacher }) => {
               href={`https://wa.me/${teacher.whatsapp}`}
             >
               <img src={whatsappIcon} alt="WhatsApp"/>
-              Entrar em contato
+              連絡する
             </a>
           </footer>
         </article>
