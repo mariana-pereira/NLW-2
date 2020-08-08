@@ -17,14 +17,14 @@ const GiveClasses: React.FC = () => {
   return (
     <View style={styles.container}>
       <ImageBackground resizeMode="contain" source={giveClassesBgImage} style={styles.content}>
-        <Text style={styles.title}>Quer ser um Proffy?</Text>
+        <Text style={styles.title}>Proffyになりたいですか？</Text>
         <Text style={styles.description}>
-          Para começar, você precisa se cadastrar como professor na nossa plataforma web.
+          開始するには、Webプラットフォームで教師として登録する必要があります。
         </Text>
       </ImageBackground>
 
       <RectButton onPress={handleNavigateBack} style={styles.okButton}>
-        <Text style={styles.okButtonText}>Tudo bem</Text>
+        <Text style={styles.okButtonText}>はい</Text>
       </RectButton>
     </View>
   );

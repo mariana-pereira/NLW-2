@@ -52,7 +52,7 @@ const TeacherList: React.FC = () => {
   return (
     <View style={styles.container}>
       <PageHeader 
-        title="Proffys disponíveis" 
+        title="利用可能なProffys" 
         headerRight={(
           <BorderlessButton onPress={handleToggleFiltersVisible}>
             <Feather name="filter" size={20} color="#fff" />
@@ -61,40 +61,40 @@ const TeacherList: React.FC = () => {
       >
         { isFiltersVisible && (
             <View style={styles.searchForm}>
-            <Text style={styles.label}>Matéria</Text>
+            <Text style={styles.label}>主題</Text>
             <TextInput 
               style={styles.input}
               value={subject}
               onChangeText={text => setSubject(text)}
-              placeholder="Qual a matéria?"
+              placeholder="どの主題？"
               placeholderTextColor="#c1bccc"
             />
 
             <View style={styles.inputGroup}>
               <View style={styles.inputBlock}>
-                <Text style={styles.label}>Dia da semana</Text>
+                <Text style={styles.label}>曜日</Text>
                 <TextInput 
                   style={styles.input}
                   value={week_day}
                   onChangeText={text => setWeekDay(text)}
-                  placeholder="Qual o dia?"
+                  placeholder="どの日？"
                   placeholderTextColor="#c1bccc"
                 />
               </View>
 
               <View style={styles.inputBlock}>
-                <Text style={styles.label}>Horário</Text>
+                <Text style={styles.label}>スケジュール</Text>
                 <TextInput 
                   style={styles.input}
                   value={time}
                   onChangeText={text => setTime(text)} 
-                  placeholder="Qual o horário?"
+                  placeholder="何時に？"
                   placeholderTextColor="#c1bccc"
                 />
               </View>
             </View>
             <RectButton onPress={handleFiltersSubmit} style={styles.submitButton}>
-              <Text style={styles.submitButtonText}>Filtrar</Text>
+              <Text style={styles.submitButtonText}>フィルタ</Text>
             </RectButton>
           </View>
         ) }

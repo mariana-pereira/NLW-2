@@ -37,8 +37,8 @@ const Landing: React.FC = () => {
       <Image source={landingImg} style={styles.banner} />
 
       <Text style={styles.title}>
-        Seja bem-vindo, {'\n'}
-        <Text style={styles.titleBold}>O que deseja fazer?</Text>
+        歓迎します、 {'\n'}
+        <Text style={styles.titleBold}>何をしたいですか？</Text>
       </Text>
 
       <View style={styles.buttonsContainer}>
@@ -47,7 +47,7 @@ const Landing: React.FC = () => {
           style={[styles.button, styles.buttonPrimary]}
         >
           <Image source={studyIcon} />
-          <Text style={styles.buttonText}>Estudar</Text>
+          <Text style={styles.buttonText}>勉強する</Text>
         </RectButton>
 
         <RectButton 
@@ -55,12 +55,12 @@ const Landing: React.FC = () => {
           style={[styles.button, styles.buttonSecondary]}
         >
           <Image source={giveClassesIcon} />
-          <Text style={styles.buttonText}>Dar aulas</Text>
+          <Text style={styles.buttonText}>クラスを与える</Text>
         </RectButton>
       </View>
 
       <Text style={styles.totalConnections}>
-        Total de {totalConnections} conexões já realizadas {' '}
+        すでに{totalConnections}の接続が確立されています {' '}
         <Image source={heartIcon} />
       </Text>
     </View>

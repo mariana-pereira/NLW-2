@@ -28,7 +28,7 @@ const Favorites: React.FC = () => {
   
   return (
     <View style={styles.container}>
-      <PageHeader title="Meus proffys favoritos" />
+      <PageHeader title="私の好きなプロフィproffys" />
 
       <ScrollView
         style={styles.teacherList}

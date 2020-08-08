@@ -58,7 +58,7 @@ function StudyTabs() {
         name="Favorites" 
         component={Favorites}
         options={{
-          tabBarLabel: 'Favoritos',
+          tabBarLabel: '好きな',
           tabBarIcon: ({ size, color, focused }) => {
             return (
               <Ionicons name="ios-heart" size={size} color={focused ? '#8257e5' : color} />
