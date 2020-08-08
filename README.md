@@ -24,7 +24,7 @@ $ yarn start
 
 Roda a aplicação em modo de desenvolvimento. Abra http://localhost:3000 para ver no navegador.
 
-![Proffy Web](https://drive.google.com/file/d/1Ym-R1vJE9O5WOFPsphX9yMjySzVTCzLf/view?usp=sharing)
+![Proffy Web](https://github.com/mariana-pereira/proffy/blob/master/images/proffy-web.png)
 
 Mobile
 ```bash
@@ -35,4 +35,4 @@ $ yarn start
 
 Roda a aplicação com expo. Use um emulador ou celular para visualizar.
 
-![Proffy Mobile](https://drive.google.com/file/d/1jEwr5l9nPTu8-W2p-PcqAzeDyz0aNm7e/view?usp=sharing)
+![Proffy Mobile](https://github.com/mariana-pereira/proffy/blob/master/images/proffy-mobile.jpeg)
