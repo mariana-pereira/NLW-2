@@ -1,7 +1,7 @@
-Proffy
+## Proffy
 Código desenvolvido durante a Next Level Week 2.
 
-Building
+## Building
 Você vai precisar do Node.js no seu computador para rodar essa aplicação.
 
 git clone https://github.com/mariana-pereira/proffy
